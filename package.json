@@ -1,13 +1,13 @@
 {
-  "name": "modern-portfolio",
-  "version": "1.0.1",
+  "name": "elaamokrani-portfolio",
+  "version": "1.0.0",
   "private": true,
   "author": {
     "name": "Elaa MOKRANI",
     "email": "elaamokrani4@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "url": "https://github.com/Elaa-Mokrani"
   },
-  "description": "ELaa MOKRANI is a Full-stack web developer with 10+ years of experience.",
+  "description": "Elaa MOKRANI is a Full-stack web developer and data analyst.",
   "keywords": [
     "react",
     "next",
@@ -26,34 +26,25 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanidhyy/modern-portfolio.git"
+    "url": "https://github.com/Elaa-Mokrani/elaa-mokrani.github.io.git"
   },
-  "homepage": "https://github.com/sanidhyy/modern-portfolio#readme",
+  "homepage": "https://elaa-mokrani.github.io/",
   "bugs": {
-    "url": "https://github.com/sanidhyy/modern-portfolio/issues",
-    "email": "sanidhya.verma12345@gmail.com"
+    "url": "https://github.com/Elaa-Mokrani/elaa-mokrani.github.io/issues",
+    "email": "elaamokrani4@gmail.com"
   },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
-    "@next/font": "^13.4.4",
+    "@formspree/react": "^3.0.0",
     "framer-motion": "^10.12.16",
     "next": "14.1.1",
-    "nodemailer": "^7.0.10",
     "react": "18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
@@ -67,6 +58,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
   }

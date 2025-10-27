@@ -1,40 +1,11 @@
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
-
 import { fadeIn } from "../../variants";
-import { useState } from "react";
+import { useForm } from '@formspree/react';
 
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (event) => {
-  event.preventDefault();
-  setIsLoading(true);
-
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData.entries());
-
-  try {
-    const response = await fetch("/api/sendEmail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      alert("✅ Message envoyé avec succès !");
-      event.target.reset();
-    } else {
-      alert("❌ Une erreur est survenue. Réessaie plus tard.");
-    }
-  } catch (error) {
-    console.error(error);
-    alert("Erreur réseau.");
-  } finally {
-    setIsLoading(false);
-  }
-};
-
+  // ✅ Utilise Formspree avec ton ID "manlqdww"
+  const [state, handleSubmit] = useForm("manlqdww");
 
   return (
     <div className="h-full bg-primary/30">
@@ -51,80 +22,74 @@ const Contact = () => {
           >
             Let's <span className="text-accent">connect.</span>
           </motion.h2>
-           {/* small phrase */}
-        <motion.p
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="text-white/80 mb-10 max-w-[1000px] text-center"
-        >
-          Feel free to reach out for collaborations, questions, or just to say hi! I’m always excited to connect and share ideas.
-        </motion.p>
+          
+          {/* small phrase */}
+          <motion.p
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="text-white/80 mb-10 max-w-[1000px] text-center"
+          >
+            Feel free to reach out for collaborations, questions, or just to say hi! I'm always excited to connect and share ideas.
+          </motion.p>
 
-          {/* form */}
+          {/* ✅ FORM AVEC FORMSPREE - MÊME STYLE ! */}
           <motion.form
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
             className="flex-1 flex flex-col gap-6 w-full mx-auto"
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit} // ✅ Formspree gère l'envoi
             autoComplete="off"
             autoCapitalize="off"
-            // only needed for production (in netlify) to accept form input
-            data-netlify="true"
           >
-            {/* input group */}
+            {/* input group - MÊME STYLE ! */}
             <div className="flex gap-x-6 w-full">
               <input
                 type="text"
                 name="name"
                 placeholder="Name"
                 className="input"
-                disabled={isLoading}
-                aria-disabled={isLoading}
+                disabled={state.submitting}
                 required
-                aria-required
               />
               <input
                 type="email"
                 name="email"
                 placeholder="E-mail"
                 className="input"
-                disabled={isLoading}
-                aria-disabled={isLoading}
+                disabled={state.submitting}
                 required
-                aria-required
               />
             </div>
+            
             <input
               type="text"
               name="subject"
               placeholder="Subject"
               className="input"
-              disabled={isLoading}
-              aria-disabled={isLoading}
+              disabled={state.submitting}
               required
-              aria-required
             />
+            
             <textarea
               name="message"
               placeholder="Message..."
               className="textarea"
-              disabled={isLoading}
-              aria-disabled={isLoading}
+              disabled={state.submitting}
               required
-              aria-required
             />
+            
+            {/* ✅ BOUTON - MÊME STYLE ! */}
             <button
               type="submit"
               className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
-              disabled={isLoading}
-              aria-disabled={isLoading}
+              disabled={state.submitting}
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let's talk
+                {state.submitting ? "Sending..." : "Let's talk"}
               </span>
 
               <BsArrowRight
@@ -132,20 +97,31 @@ const Contact = () => {
                 aria-hidden
               />
             </button>
+
+            {/* ✅ MESSAGE DE SUCCÈS */}
+            {state.succeeded && (
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-accent text-center mt-4"
+              >
+           ✅ Message sent successfully! I'll get back to you soon.
+              </motion.p>
+            )}
           </motion.form>
         </div>
       </div>
+      
       {/* simple phrase */}
-       <motion.p
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="text-white/80 mb-10 max-w-[100px] text-center relative z-10 mt-10 text-center text-white/60 py-6 text-sm border-t border-white/10"
-        >
-          © 2025 Elaa MOKRANI. All rights reserved.
-        </motion.p>
-
+      <motion.p
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="text-white/80 mb-10 max-w-[100px] text-center relative z-10 mt-10 text-center text-white/60 py-6 text-sm border-t border-white/10"
+      >
+        © 2025 Elaa MOKRANI. All rights reserved.
+      </motion.p>
     </div>
   );
 };
