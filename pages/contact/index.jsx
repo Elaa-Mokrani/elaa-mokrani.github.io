@@ -29,7 +29,7 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-white/80 mb-10 max-w-[1000px] text-center"
+            className="text-white/80 mb-10 max-w-[1000px] text-center hidden md:block"
           >
             Feel free to reach out for collaborations, questions, or just to say hi! I'm always excited to connect and share ideas.
           </motion.p>
@@ -110,18 +110,23 @@ const Contact = () => {
             )}
           </motion.form>
         </div>
+    
+
       </div>
       
       {/* simple phrase */}
-      <motion.p
-        variants={fadeIn("up", 0.3)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-        className="text-white/80 mb-10 max-w-[100px] text-center relative z-10 mt-10 text-center text-white/60 py-6 text-sm border-t border-white/10"
-      >
-        © 2025 Elaa MOKRANI. All rights reserved.
-      </motion.p>
+    <footer className=" flex justify-center">
+  <motion.p
+    variants={fadeIn("up", 0.3)}
+    initial="hidden"
+    animate="show"
+    exit="hidden"
+    className="text-white/80 max-w-[500px] text-center mt-[-32px] hidden md:block"
+  >
+    © 2025 Elaa MOKRANI. All rights reserved.
+  </motion.p>
+</footer>
+
     </div>
   );
 };

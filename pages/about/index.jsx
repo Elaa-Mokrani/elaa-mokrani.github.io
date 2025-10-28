@@ -53,7 +53,7 @@ export const aboutData = [
         icons: [SiMysql, SiMongodb, SiMicrosoftsqlserver, FaDatabase],
       },
       {
-        title: "Data Science & Tools",
+        title: "Data Science Tools",
         icons: [SiPowerbi, SiApache, SiJupyter, SiAnaconda],
       },
       {
@@ -85,7 +85,7 @@ export const aboutData = [
       stage: "UVT (present)",
     },
     {
-      title:"Bachelor’s Degree in Computer Engineering – in IoT & Embedded Systems",
+      title:"Licence’s Degree in Computer Engineering – in IoT & Embedded Systems",
       stage: "ISTIC Borj Cedria (2024)",
     },
     {
@@ -162,7 +162,7 @@ const About = () => {
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-center hidden md:block">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -170,13 +170,13 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            From <span className="text-accent">ideas</span> to applications , from  <span className="text-accent">data</span> to decisions
+            From <span className="text-accent ">ideas</span> to applications , from  <span className="text-accent">data</span> to decisions
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 hidden md:block"
           >
             I’m a beginner Full-Stack Developer and Data Analyst, passionate about transforming data into insights and building interactive web applications. I enjoy learning new technologies and applying them to real projects to solve practical problems.
           </motion.p>
