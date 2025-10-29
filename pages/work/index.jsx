@@ -29,7 +29,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-             Here are some of my projects where I apply my skills in web development, interactive design, anddata analysis. Each project helps me grow and learn new technologies.
+             Here are some of my projects where I apply my skills in web development, interactive design, and data analysis. Each project helps me grow and learn new technologies.
             </motion.p>
           </div>
 
