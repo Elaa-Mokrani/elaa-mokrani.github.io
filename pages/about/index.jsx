@@ -100,7 +100,7 @@ export const aboutData = [
   info: [
     {
       title: "Master’s Final Project",
-      stage: "Codix Tunisie – CUN (02-06/2026)",
+      stage: "Codix – CUN (02-06/2026)",
     },
     {
       title: "Web Development Intern",
