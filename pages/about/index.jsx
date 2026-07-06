@@ -99,7 +99,7 @@ export const aboutData = [
   title: "experience",
   info: [
     {
-      title: "Master’s Final Project (Mailguard)",
+      title: "Master’s Final Project",
       stage: "Codix Tunisie – CUN (02-06/2026)",
     },
     {
