@@ -22,8 +22,8 @@ const Home = () => {
           >
            
             <span className="text-accent">Hi I'm Elaa!</span>
-             <br /> Full-Stack Developer <br /> 
-             Data Analyst  {" "}
+             <br /> Data Scientist <br /> 
+             Full-Stack Developer  {" "}
           </motion.h1>
 
           {/* subtitle */}
