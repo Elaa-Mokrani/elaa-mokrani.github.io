@@ -12,10 +12,10 @@ const workSlides = {
     {
       images: [
         {
-          title: "Tunisie Telecom",
-          path: "/telecom.png",
-          link: "https://github.com/Elaa-Mokrani/projet-de-fin-d-etudes-.git",
-          tools: ["IoT", "Cloud", "Node-RED", "HTML", "CSS", "JS"],
+          title: "Mailguard",
+          path: "/mailguard.png",
+          link: "https://mail-guard-lake.vercel.app",
+          tools: ["Deep Learning", "LLM", "OCR", "XAI", "MLOps", "Full-stack"],
         },
         {
           title: "Enercall",
@@ -62,6 +62,12 @@ const workSlides = {
           path: "/unimarket.png",
           link: "http://unimarket.tn",
           tools: ["WordPress", "E-commerce","SEO"],
+        },
+        {
+          title: "Tunisie Telecom",
+          path: "/telecom.png",
+          link: "https://github.com/Elaa-Mokrani/projet-de-fin-d-etudes-.git",
+          tools: ["IoT", "Cloud", "Node-RED", "HTML", "CSS", "JS"],
         },
       ],
     },
