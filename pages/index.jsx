@@ -35,7 +35,7 @@ const Home = () => {
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 -mt-6 mb-6 xl:mb-6 hidden md:block "
 
           >
-            I’m passionate about data analysis, interactive visualization, and modern web development. With a strong academic foundation in computer engineering and IoT, I’m currently pursuing a Master’s degree in Business Analytics and Data Science. 
+            I’m passionate about data science, machine learning, and interactive data visualization. I hold a Master’s degree in Business Analytics and Data Science, with a strong background in computer engineering.
           </motion.p>
 
           {/* btn */}
