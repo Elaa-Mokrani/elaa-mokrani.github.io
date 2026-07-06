@@ -82,7 +82,7 @@ export const aboutData = [
   info: [
     {
       title: "Master’s Degree in Business Analytics and Data Science",
-      stage: "UVT (present)",
+      stage: "UVT (2026)",
     },
     {
       title:"Licence’s Degree in Computer Engineering – in IoT & Embedded Systems",
@@ -98,6 +98,10 @@ export const aboutData = [
 {
   title: "experience",
   info: [
+    {
+      title: "Master’s Final Project (Mailguard)",
+      stage: "Codix Tunisie – CUN (02-06/2026)",
+    },
     {
       title: "Web Development Intern",
       stage: "Lablink – Montplaisir (01-03/2025)",
