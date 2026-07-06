@@ -13,7 +13,7 @@ const workSlides = {
       images: [
         {
           title: "Mailguard",
-          path: "/mailguard.png",
+          path: "/Mailguard.png",
           link: "https://mail-guard-lake.vercel.app",
           tools: ["Deep Learning", "LLM", "OCR", "XAI", "MLOps", "Full-stack"],
         },
