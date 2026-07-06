@@ -63,12 +63,7 @@ const workSlides = {
           link: "http://unimarket.tn",
           tools: ["WordPress", "E-commerce","SEO"],
         },
-        {
-          title: "Tunisie Telecom",
-          path: "/telecom.png",
-          link: "https://github.com/Elaa-Mokrani/projet-de-fin-d-etudes-.git",
-          tools: ["IoT", "Cloud", "Node-RED", "HTML", "CSS", "JS"],
-        },
+        
       ],
     },
     {
